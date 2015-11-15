@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HW3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="AT">Austria</string>
+    <string name="PL">Poland</string>
+    <string name="IT">Italy</string>
+    <string name="CO">Colombia</string>
+    <string name="MG">Madagascar</string>
+    <string name="TH">Thailand</string>
+    <string name="DK">Denmark</string>
+
+</resources>

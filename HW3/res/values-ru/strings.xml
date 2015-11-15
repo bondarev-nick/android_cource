@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="AT">Автрия</string>
+    <string name="PL">Польша</string>
+    <string name="IT">Италия</string>
+    <string name="CO">Колумбия</string>
+    <string name="MG">Мадагаскар</string>
+    <string name="TH">Таиланд</string>
+    <string name="DK">Дания</string>
+
+</resources>
