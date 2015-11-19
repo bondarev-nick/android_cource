@@ -17,14 +17,13 @@ public class MyAdapter extends BaseAdapter {
 	private Context _ctx;
 	List<String> _data;
 	LayoutInflater _inflater;
-	ViewCach _vc;
+	
 	
 	public MyAdapter(Context ctx, List<String> data) {
 		_ctx = ctx;
 		_data = data;
 		_inflater = (LayoutInflater)_ctx.
 				getSystemService(_ctx.LAYOUT_INFLATER_SERVICE);
-		_vc = new ViewCach(); 
 	}
 	
 	@Override
@@ -49,9 +48,11 @@ public class MyAdapter extends BaseAdapter {
 		View v = convertView;
 		if (v == null) {
 			v = _inflater.inflate(R.layout.lv_item, parent, false);
+			v.setTag(new MyViewHolder(v));
 		}
 		
-		TextView tv = _vc.getTextView(v);
+		MyViewHolder vh = (MyViewHolder)v.getTag();
+		TextView tv = vh._tv;
 		if (tv != null) {
 			tv.setText(_data.get(position).toString());
 		}
@@ -59,22 +60,14 @@ public class MyAdapter extends BaseAdapter {
 		return v;
 	}
 	
-	private class ViewCach {
-		private Map<View, View> _cach;
+	private class MyViewHolder {
 		
-		public ViewCach () {
-			_cach = new HashMap<View, View>();
-		}
+		public View _v;
+		public TextView _tv;
 		
-		public TextView getTextView(View v) {
-			Log.d("aaa", String.format("Cach size: %d", _cach.size()));
-			TextView tv = (TextView)_cach.get(v);
-			if (tv == null) {
-				tv = (TextView)v.findViewById(R.id.tv);
-				_cach.put(v, tv);
-			}
-
-			return tv;
+		public MyViewHolder(View v) {
+			_v = v;
+			_tv = (TextView)_v.findViewById(R.id.tv);
 		}
 	}
 
