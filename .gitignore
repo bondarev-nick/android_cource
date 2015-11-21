@@ -2,6 +2,7 @@
 ## Eclipse
 #################
 
+.idea/
 *.jar
 *.pydevproject
 .project
