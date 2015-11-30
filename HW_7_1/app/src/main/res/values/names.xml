@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array
+        name="names">
+        <item>Monte</item>
+        <item>Britt</item>
+        <item>Ernesto</item>
+        <item>Jewell</item>
+        <item>Garfield</item>
+        <item>Monte</item>
+        <item>Jerold</item>
+    </array>
+</resources>
